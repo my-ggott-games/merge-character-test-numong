@@ -1,0 +1,11 @@
+body{
+  background-color: #CFAC6A;
+}
+
+*{
+  font-family: 'Gaegu', cursive;
+}
+
+.keepAll {
+  word-break: keep-all;
+}
