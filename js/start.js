@@ -44,6 +44,7 @@ function addAnswer(answerText, qIdx, idx){
   var answer = document.createElement('button');  // button 만들어 반환
   answer.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
   answer.classList.add('my-3');
+  answer.classList.add('px-3');
   answer.classList.add('py-3');
   answer.classList.add('mx-auto');
   answer.classList.add('fadeIn');
