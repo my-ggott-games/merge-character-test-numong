@@ -9,16 +9,18 @@ function updateBackground() {
       hr = (new Date()).getHours(),
       body = document.body,
       bstyle = body.style;
-  if (hr < 10) {
-    bstyle.backgroundColor = "#ECD9BA";
+  if (hr < 6) {
+    bstyle.backgroundColor = "#5B6476";
     // bstyle.color = "black";
-  } else if (hr < 20) {
+  } else if (hr < 12) {
+    bstyle.backgroundColor = "#ECD9BA";
+  } else if (hr < 18) {
     bstyle.backgroundColor = "#CECCB4";
-  } else {
+  }else {
     bstyle.backgroundColor = "#5B6476";
   }
 }
-
+// #ECD9BA #CECCB4 #5B6476
 setInterval(updateBackground, 1000 * 60);
 updateBackground();
 
