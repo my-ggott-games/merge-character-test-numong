@@ -9,9 +9,9 @@ function updateBackground() {
       hr = (new Date()).getHours(),
       body = document.body,
       bstyle = body.style;
+      bstyle.color = "black";
   if (hr < 6) {
     bstyle.backgroundColor = "#5B6476";
-    // bstyle.color = "black";
   } else if (hr < 12) {
     bstyle.backgroundColor = "#ECD9BA";
   } else if (hr < 18) {
