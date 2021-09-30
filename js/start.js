@@ -20,7 +20,7 @@ function updateBackground() {
 }
 
 setInterval(updateBackground, 1000 * 60);
-// updateBackground();
+updateBackground();
 
 function calResult(){
   var result = select.indexOf(Math.max(...select));
