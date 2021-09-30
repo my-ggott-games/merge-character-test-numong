@@ -4,6 +4,24 @@ const result = document.querySelector( "#result");
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+function updateBackground() {
+  var
+      hr = (new Date()).getHours(),
+      body = document.body,
+      bstyle = body.style;
+  if (hr < 10) {
+    bstyle.backgroundColor = "#ECD9BA";
+    // bstyle.color = "black";
+  } else if (hr < 20) {
+    bstyle.backgroundColor = "#CECCB4";
+  } else {
+    bstyle.backgroundColor = "#5B6476";
+  }
+}
+
+setInterval(updateBackground, 1000 * 60);
+// updateBackground();
+
 function calResult(){
   var result = select.indexOf(Math.max(...select));
   return result;
@@ -20,19 +38,18 @@ function setResult(){
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');     // image 에 반응성 적용
-  resultImg.sizes =
-  imgDiv.appendChild(resultImg);          // resultImg 연결
+  resultImg.sizes = imgDiv.appendChild(resultImg);          // resultImg 연결
 
   const resultDesc = document.querySelector('.resultDesc');
   resultDesc.innerHTML = infoList[point].desc;
 }
 
 function goResult(){
-  qna.style.WebkitAnimation = "fadeOut 1s";
-  qna.style.animation = "fadeOut 1s";
+  qna.style.WebkitAnimation = "fadeOut 0.5s";
+  qna.style.animation = "fadeOut 0.5s";
   setTimeout(() => {
-    result.style.WebkitAnimation = "fadeIn 1s";
-    result.style.animation = "fadeIn 1s";
+    result.style.WebkitAnimation = "fadeIn 0.5s";
+    result.style.animation = "fadeIn 0.5s";
     setTimeout(() => {
       qna.style.display = "none";
       result.style.display = "block"
