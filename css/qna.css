@@ -6,6 +6,7 @@
 
 .qBox {
   background-color: #FAFBFE;
+  border: 3px solid black;
   text-align: center;
   border-radius: 20px;
   font-size: 24px;
@@ -17,7 +18,7 @@
   border-radius: 20px;
   display: block;
   width: 80%;
-  border: 0px;
+  border: 3px solid black;
   font-size: 20px;
 }
 
@@ -31,6 +32,7 @@
   width: 80%;
   background-color: white;
   border-radius: 20px;
+  border: 3px solid black;
 }
 
 .statusBar {
