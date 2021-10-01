@@ -1,7 +1,6 @@
 #qna {
   display: none;
   word-break: keep-all;
-
 }
 
 .qBox {
@@ -10,8 +9,8 @@
   border: 3px solid black;
   border-radius: 20px;
   text-align: center;
-  font-size: 24px;
-  width: 80%
+  font-size: 22px;
+  width: 85%
 }
 
 .answerList {
@@ -21,7 +20,7 @@
   border: 3px solid black;
   border-radius: 20px;
   font-size: 20px;
-  width: 80%;
+  width: 85%;
 }
 
 .answerList:hover, .answerList:focus {
@@ -31,8 +30,8 @@
 
 .progress {
   height: 20px;
-  width: 80%;
-  background-color: white;
+  width: 85%;
+  background-color: #FAFBFE;
   border-radius: 20px;
   border: 3px solid black;
 }
