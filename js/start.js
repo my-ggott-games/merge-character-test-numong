@@ -3,6 +3,7 @@ const qna = document.querySelector("#qna");   // 상수에 qna section 담기
 const result = document.querySelector( "#result");
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let width = 1;
 
 function updateBackground() {
   var
@@ -93,18 +94,26 @@ function addAnswer(answerText, qIdx, idx){
   }, false);
 }
 
-function goNext(qIdx){
-  if(qIdx === endPoint){
+function goNext(qIdx) {
+  if (qIdx === endPoint) {
     goResult();
     return;
   }
   var q = document.querySelector('.qBox');
   q.innerHTML = qnaList[qIdx].q;        // 질문: element 안의 HTML이나 XML 가져오기 <-> innerText
-  for(let i in qnaList[qIdx].a){        // 답변: 버튼 만들기
+  for (let i in qnaList[qIdx].a) {        // 답변: 버튼 만들기
     addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
   }
-  var status = document.querySelector('.statusBar');
-  status.style.width = (100/endPoint) * (qIdx+1) + '%';   // 질문이 12개이므로 12등분
+  var progress = document.querySelector('.progressBar');
+  var id = setInterval(frame, 15);
+  function frame() {
+    if (width >= (100/endPoint) * (qIdx+1)) {
+      clearInterval(id);
+    } else {
+      width++;
+      progress.style.width = width + '%';
+    }
+  }
 }
 
 function begin(){

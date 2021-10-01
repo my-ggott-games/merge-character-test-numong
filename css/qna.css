@@ -27,7 +27,7 @@
   color: #FAFBFE;
 }
 
-.status {
+.progress {
   height: 20px;
   width: 80%;
   background-color: white;
@@ -35,7 +35,7 @@
   border: 3px solid black;
 }
 
-.statusBar {
+.progressBar {
   height: 100%;
   border-radius: 20px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
