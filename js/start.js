@@ -18,7 +18,7 @@ function updateBackground() {
   } else if (hr < 18) {
     bstyle.backgroundColor = "#CECCB4";
   }else {
-    bstyle.backgroundColor = "#5B6476";
+    bstyle.backgroundColor = "#8CA1AE";
   }
 }
 // #ECD9BA #CECCB4 #5B6476

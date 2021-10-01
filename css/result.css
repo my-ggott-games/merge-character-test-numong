@@ -25,13 +25,14 @@
   color: white;
   background-color: #FEE500;
   font-size: 20px;
-  border: 0;
+  border: 0px;
   border-radius: 12px;
 }
 
 .kakao:hover, .kakao:focus {
   color: black;
   background-color: #FEE500;
+  border-radius: 5px;
 }
 
 .gohome{
@@ -39,7 +40,7 @@
   background-color: pink;
   font-size: 20px;
   border: 0;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .gohome:hover, .gohome:focus {
