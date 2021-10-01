@@ -10,7 +10,7 @@
   border-radius: 20px;
   text-align: center;
   font-size: 22px;
-  width: 85%
+  width: 90%
 }
 
 .answerList {
@@ -20,7 +20,7 @@
   border: 3px solid black;
   border-radius: 20px;
   font-size: 20px;
-  width: 85%;
+  width: 90%;
 }
 
 .answerList:hover, .answerList:focus {
@@ -30,7 +30,7 @@
 
 .progress {
   height: 20px;
-  width: 85%;
+  width: 90%;
   background-color: #FAFBFE;
   border-radius: 20px;
   border: 3px solid black;
