@@ -26,7 +26,7 @@
   background-color: #FEE500;
   font-size: 20px;
   border: 0px;
-  border-radius: 12px;
+  border-radius: 5px;
 }
 
 .kakao:hover, .kakao:focus {
@@ -36,8 +36,8 @@
 }
 
 .gohome{
-  color: white;
-  background-color: pink;
+  color: #FAFBFE;
+  background-color: #CFAC6A;
   font-size: 20px;
   border: 0;
   border-radius: 5px;
@@ -45,7 +45,7 @@
 
 .gohome:hover, .gohome:focus {
   background-color: #FAFBFE;
-  color: pink;
+  color: #CFAC6A;
 }
 
 .keepAll {
