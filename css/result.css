@@ -44,8 +44,8 @@
 }
 
 .gohome:hover, .gohome:focus {
-  background-color: #FAFBFE;
-  color: #CFAC6A;
+  color: black;
+  background-color: #CFAC6A;
 }
 
 .keepAll {

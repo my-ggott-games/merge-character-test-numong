@@ -44,7 +44,7 @@
         <p>"밥을 안삼키면 계속 맛있지 않을까?" -누멍이</p>
     </div>
     <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-        <img src="../img/image-0.jpeg" alt="0" class="img-fluid">
+        <img src="../img/image-0.png" alt="0" class="img-fluid">
     </div>
     <div class="resultDesc">
         <p style="word-break:keep-all">연애의 프로재능러인 당신! 쥐에 해당하는 당신은 연애의 모든 것들을 알고 있어,
@@ -54,10 +54,31 @@
             때문에 겸손이 필요하답니다!</p>
     </div>
     <script type="text/javascript">
+        function updateBackground() {
+            var
+                hr = (new Date()).getHours(),
+                body = document.body,
+                bstyle = body.style;
+            if (hr < 6) {
+                bstyle.backgroundColor = "#5B6476";
+            } else if (hr < 12) {
+                bstyle.backgroundColor = "#ECD9BA";
+            } else if (hr < 18) {
+                bstyle.backgroundColor = "#CECCB4";
+            }else {
+                bstyle.backgroundColor = "#8CA1AE";
+            }
+        }
+        setInterval(updateBackground, 1000 * 60);
+        updateBackground();
+    </script>
+    <!-- 시간에 따른 자동 배경 변경 -->
+    <script type="text/javascript">
         function moveHome() {
             location.href = "/index.html";
         }
     </script>
+    <!-- 다시하기 -->
     <button type="button" class="gohome mt-3 py-2 px-3" onclick="js:moveHome()">다시하기</button>
 </section>
 </div>
