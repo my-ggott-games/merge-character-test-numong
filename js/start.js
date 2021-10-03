@@ -98,6 +98,8 @@ function goNext(qIdx) {
 }
 
 function begin(){
+  var startButton = document.querySelector('.btn');
+  startButton.style.display = 'none';
   main.style.WebkitAnimation = "fadeOut 1s";  // Webkit - 크롬
   main.style.animation = "fadeOut 1s";        // is 아니고 1초, main fade out
   setTimeout(() => {
