@@ -30,4 +30,6 @@ function setShare(){
       },
     ]
   });
+  // window.open("https://twitter.com/intent/tweet?text=" + shareTitle + "&url=" + shareURL);
+  // window.open("http://www.facebook.com/sharer/sharer.php?u=" + shareURL);
 }

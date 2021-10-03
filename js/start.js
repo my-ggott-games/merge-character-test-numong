@@ -3,7 +3,7 @@ const qna = document.querySelector("#qna");   // 상수에 qna section 담기
 const result = document.querySelector( "#result");
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let width = 1;
+var progressWidth = 1;
 
 function updateBackground() {
   var
@@ -25,6 +25,7 @@ setInterval(updateBackground, 1000 * 60);
 updateBackground();
 
 function calResult(){
+  console.log(select);
   var result = select.indexOf(Math.max(...select));
   return result;
 }
@@ -36,11 +37,11 @@ function setResult(){
 
   var resultImg = document.createElement('img');
   const imgDiv = document.querySelector('#resultImg');
-  var imgURL = 'img/image-' + point + '.jpeg';       // image-n.png
+  var imgURL = 'img/image-' + point + '.png';       // image-n.png
   resultImg.src = imgURL;
   resultImg.alt = point;
   resultImg.classList.add('img-fluid');     // image 에 반응성 적용
-  resultImg.sizes = imgDiv.appendChild(resultImg);          // resultImg 연결
+  imgDiv.appendChild(resultImg);          // resultImg 연결
 
   const resultDesc = document.querySelector('.resultDesc');
   resultDesc.innerHTML = infoList[point].desc;
@@ -100,17 +101,17 @@ function goNext(qIdx) {
   }
   var q = document.querySelector('.qBox');
   q.innerHTML = qnaList[qIdx].q;        // 질문: element 안의 HTML이나 XML 가져오기 <-> innerText
-  for (let i in qnaList[qIdx].a) {        // 답변: 버튼 만들기
-    addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
+  for (let i in qnaList[qIdx].a){        // 답변: 버튼 만들기
+    addAnswer(qnaList[qIdx].a[i].answer, qIdx, i)
   }
   var progress = document.querySelector('.progressBar');
-  var id = setInterval(frame, 15);
-  function frame() {
-    if (width >= (100/endPoint) * (qIdx+1)) {
+  var id = setInterval(progressFrame, 15);
+  function progressFrame() {
+    if (progressWidth >= (100/endPoint) * (qIdx+1)) {
       clearInterval(id);
     } else {
-      width++;
-      progress.style.width = width + '%';
+      progressWidth++;
+      progress.style.width = progressWidth + '%';
     }
   }
 }
