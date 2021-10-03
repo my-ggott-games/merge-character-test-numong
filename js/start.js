@@ -1,28 +1,9 @@
 const main = document.querySelector("#main"); // 상수에 main section 담기
 const qna = document.querySelector("#qna");   // 상수에 qna section 담기
-const result = document.querySelector( "#result");
+const result = document.querySelector( "#result");  // 상수에 result section 담기
 const endPoint = 12;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var progressWidth = 1;
-
-function updateBackground() {
-  var
-      hr = (new Date()).getHours(),
-      body = document.body,
-      bstyle = body.style;
-  if (hr < 6) {
-    bstyle.backgroundColor = "#5B6476";
-  } else if (hr < 12) {
-    bstyle.backgroundColor = "#ECD9BA";
-  } else if (hr < 18) {
-    bstyle.backgroundColor = "#CECCB4";
-  }else {
-    bstyle.backgroundColor = "#8CA1AE";
-  }
-}
-// #ECD9BA #CECCB4 #5B6476
-setInterval(updateBackground, 1000 * 60);
-updateBackground();
 
 function calResult(){
   console.log(select);
