@@ -24,7 +24,7 @@
 }
 
 .answerList:hover, .answerList:focus {
-  background-color: pink;
+  background-color: #ADC9E1;
   color: #FAFBFE;
 }
 
