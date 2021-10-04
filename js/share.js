@@ -22,7 +22,7 @@ function setShare(){
 
     buttons: [
       {
-        title: '결과확인하기',
+        title: '어떤 친구일까?',
         link: {
           mobileWebUrl: shareURL,
           webUrl: shareURL,
