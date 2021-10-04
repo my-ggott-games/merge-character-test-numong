@@ -2,6 +2,10 @@ body{
   background-color: #FAFBFE;
 }
 
+img {
+  border-radius: 5px;
+}
+
 *{
   font-family: 'Gaegu', cursive;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 모바일 화면을 위한 meta 태그, 사용중인 장치와 동일하게 뷰포트의 너비를 설정-->
@@ -11,18 +11,19 @@
     <meta name="description" content="내 소울메이트는 누구일까?">
 
     <!-- sns 공유하기 -->
-    <meta property="og:url" content="https://beta-numong-test.netlify.app" />
-    <meta property="og:title" content="누멍이 소울메이트 테스트" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="img/share.png" />
-    <meta property="og:description" content="내 소울메이트는 누구일까?" />
+    <meta property="og:url" content="https://beta-numong-test.netlify.app"/>
+    <meta property="og:title" content="누멍이 소울메이트 테스트"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="img/share.png"/>
+    <meta property="og:description" content="내 소울메이트는 누구일까?"/>
 
     <!--favicon-->
     <link rel="shortcut icon" href="../img/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="../img/favicon.ico"/>
 
     <title>누멍이 소울메이트 테스트</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- 반응형 웹과 버튼 등을 위한 링크 -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,27 +35,32 @@
     <link rel="stylesheet" href="../css/result.css">
     <!-- RELation(필수): 현재 문서와 외부 리소스 사이의 연관 관계를 명시
     Hypertext REFerence: 태그가 사용하는 파일의 원본-->
-  </head>
-  <body>
-  <div class="container">
+</head>
+<body>
+<div class="container">
     <section id="shareResult" class="mx-auto my-5 py-5 px-3">
-      <h1>당신의 결과는?!</h1>
-      <div class="resultname">
-        <p>이건 어때? 난 어때? 독특한 매력을 가진 '토끼''</p>
-      </div>
-      <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-        <img src="../img/image-3.png" alt="0" class="img-fluid">
-      </div>
-      <div class="resultDesc">
-        <p>상대방을 홀리게 만드는 당신! 신비롭고 독특한 매력을 가져, 상대방이 푹 빠지게 만드는 스타일이에요. 직감이 발달되어 손재주가 뛰어난 편이고, 연애할 때 통통 튀는 모습들을 많이 보여준답니다. 유순하고 낙천적인 성향이지만, 자칫잘못하면 상대방에게 천진난만한 아이처럼 보일 수 있는 점을 주의해야 돼요. 또한 감정 기복이 심한 편이라 변덕스러운 마음을 가질 수 있어, 이런 부분들에 신경을 쓴다면 좋은 연애를 할 수 있어요.</p>
-      </div>
-      <script type="text/javascript">
-        function moveHome(){
-          location.href = "/index.html";
-        }
-      </script>
-      <button type="button" class="gohome mt-3 py-2 px-3" onclick="js:moveHome()">다시하기</button>
+        <h1>당신의 결과는?!</h1>
+        <div class="resultname">
+            <p>이건 어때? 난 어때? 독특한 매력을 가진 '토끼''</p>
+        </div>
+        <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+            <img src="../img/image-3.png" alt="0" class="img-fluid">
+        </div>
+        <div class="resultDesc">
+            <p>상대방을 홀리게 만드는 당신! 신비롭고 독특한 매력을 가져, 상대방이 푹 빠지게 만드는 스타일이에요. 직감이 발달되어 손재주가 뛰어난 편이고, 연애할 때 통통 튀는 모습들을 많이
+                보여준답니다. 유순하고 낙천적인 성향이지만, 자칫잘못하면 상대방에게 천진난만한 아이처럼 보일 수 있는 점을 주의해야 돼요. 또한 감정 기복이 심한 편이라 변덕스러운 마음을 가질 수 있어,
+                이런 부분들에 신경을 쓴다면 좋은 연애를 할 수 있어요.</p>
+        </div>
+        <button type="button" class="gohome mt-3 py-2 px-3" onclick="js:moveHome()">다시하기</button>
     </section>
-  </div>
-  </body>
+    <script src="../js/background.js" charset="utf-8"></script>
+    <!-- 시간에 따른 자동 배경 변경 -->
+    <script type="text/javascript">
+        function moveHome() {
+            location.href = "/index.html";
+        }
+    </script>
+    <!-- 다시하기 -->
+</div>
+</body>
 </html>
