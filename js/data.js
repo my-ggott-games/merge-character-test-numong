@@ -112,15 +112,17 @@ const qnaList = [
       { answer: 'c. "아니 그건 아니고, 하.." 조용히 운다.', type: ['1', '7', '11'] },
     ]
 
-  },
+  }
+]
+
+const bonusList = [
   {
-    q: 'Bonus. 솔직히... 누가 더 좋아요?',
-    a: [
+    qBonus: 'Bonus. 솔직히... 누가 더 좋아요?',
+    aBonus: [
       { answer: 'a. 무야호1', type: ['3'] },
       { answer: 'b. 무야호2', type: ['0'] },
       { answer: 'c. 무야호3', type: ['1'] },
     ]
-
   }
 ]
 
