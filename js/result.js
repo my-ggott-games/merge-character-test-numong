@@ -12,13 +12,19 @@ function calResult(){
         }
         console.log(maxIndices);
         console.log(maxIndices.length);
-        if(maxIndices.length > 1){  // bbcc bccb abbc
-            //fill here
-        }
+        return maxIndices;
     };
-    max(select);
+    var finalSelect = max(select);
+    if(finalSelect.length > 1){  // bbcc bccb abbc
+        //fill here
+        var result = finalSelect.indexOf(Math.max(...select));
+        alert("중복 있어요!");
+    }
+    else{
+        var result = select.indexOf(Math.max(...select));
+        alert("중복 없어요!");
+    }
 
-    var result = select.indexOf(Math.max(...select));
     console.log(result);
 
     return result;
