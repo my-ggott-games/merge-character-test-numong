@@ -117,11 +117,20 @@ const qnaList = [
 
 const bonusList = [
   {
-    qBonus: 'Bonus. 솔직히... 누가 더 좋아요?',
+    qBonus: '솔직히... 누가 더 좋아요?',
     aBonus: [
-      { answer: 'a. 무야호1', type: ['3'] },
-      { answer: 'b. 무야호2', type: ['0'] },
-      { answer: 'c. 무야호3', type: ['1'] },
+      { answer: '누멍이', type: ['0'] },
+      { answer: '흰멍이', type: ['1'] },
+      { answer: '검멍이', type: ['2'] },
+      { answer: '너굴멍이', type: ['3'] },
+      { answer: '삽살이', type: ['4'] },
+      { answer: '얼룩이', type: ['5'] },
+      { answer: '바둑이', type: ['6'] },
+      { answer: '청설모', type: ['7'] },
+      { answer: '덕구', type: ['8'] },
+      { answer: '꿀꿀이', type: ['9'] },
+      { answer: '고양이', type: ['10'] },
+      { answer: '두더지', type: ['11'] }
     ]
   }
 ]
