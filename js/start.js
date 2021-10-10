@@ -6,7 +6,7 @@ const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var progressWidth = 1;
 let qIdx = 0;         // q의 인덱스, goNext() 에서 배열의 0번째 요소부터 차례로 질문한다.
 
-function addAnswer(answerText, qIdx, idx){
+function makeAnswer(answerText, qIdx, idx){
   var a = document.querySelector('.answerBox');
   var answer = document.createElement('button');  // button 만들어 반환
   answer.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
@@ -30,6 +30,7 @@ function addAnswer(answerText, qIdx, idx){
       var target = qnaList[qIdx].a[idx].type;
       for(let i = 0; i < target.length; i++){
         select[target[i]] += 1;
+        console.log(target[i] + " 가 선택되었습니다!");
       }
 
       for(let i = 0; i < children.length; i++){
@@ -47,7 +48,7 @@ function makeQnA(qIdx){
   q.innerHTML = qnaList[qIdx].q;        // 질문: element 안의 HTML이나 XML 가져오기 <-> innerText
 
   for (let i in qnaList[qIdx].a){        // 답변: 버튼 만들기
-    addAnswer(qnaList[qIdx].a[i].answer, qIdx, i)
+    makeAnswer(qnaList[qIdx].a[i].answer, qIdx, i)
   }
 }
 
