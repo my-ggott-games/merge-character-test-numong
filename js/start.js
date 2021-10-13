@@ -66,7 +66,8 @@ function goNext(qIdx) {
     }
   }
   if (qIdx === endPoint) {
-    goResult();
+    setResult()
+    // goResult();
     return;
   }
   makeQnA(qIdx);
