@@ -1,20 +1,4 @@
 function calResult() {
-    function maxIndices(select) {
-        var max = -Infinity;
-        var maxIndices = [];
-        for (var i = 0; i < select.length; i++) {
-            if (select[i] === max) {
-                maxIndices.push(i);
-            } else if (select[i] > max) {
-                maxIndices = [i];
-                max = select[i];
-            }
-        }
-        console.log("공동 1등 배열 : " + maxIndices);
-        console.log("공동 1등은 몇 개? : " + maxIndices.length);
-        return maxIndices;
-    }
-
     var finalSelect = maxIndices(select);
     var result;
     if (finalSelect.length > 1) {  // bbcc bccb abbc aaaa aaaa aaaa
@@ -32,13 +16,30 @@ function calResult() {
     }
 
     console.log("result : " + result);
+    console.log("-- calResult complete");
     return result;
 
+    function maxIndices(select) {
+        var max = -Infinity;
+        var maxIndices = [];
+        for (var i = 0; i < select.length; i++) {
+            if (select[i] === max) {
+                maxIndices.push(i);
+            } else if (select[i] > max) {
+                maxIndices = [i];
+                max = select[i];
+            }
+        }
+        console.log("공동 1등 배열 : " + maxIndices);
+        console.log("공동 1등은 몇 개? : " + maxIndices.length);
+        console.log("-- maxIndices complete");
+        return maxIndices;
+    }
 
-    function makeBonusQuestion(){
+    function makeBonusQuestion() {
         var q = document.querySelector('.qBox');
         q.innerHTML = bonusList[0].qBonus;        // 질문: element 안의 HTML이나 XML 가져오기 <-> innerText
-
+        console.log("-- makeBonusQuestion complete");
     }
 
     function setBonusQnA() {
@@ -50,6 +51,7 @@ function calResult() {
             console.log("selectedResult 갱신완료! " + selectedResult);
             console.log(i + " 번째 " + "makeBonusAnswer 불러오기 끝!");
         }
+        console.log("-- setBonusQnA complete");
     }
 
     function makeBonusAnswer(answerText, idx) {
@@ -59,30 +61,39 @@ function calResult() {
         bonusAnswerButton.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
         bonusAnswerButton.classList.add('my-3');
         bonusAnswerButton.classList.add('px-3');
-        bonusAnswerButton.classList.add('py`-3');
+        bonusAnswerButton.classList.add('py-3');
         bonusAnswerButton.classList.add('mx-auto');
         bonusAnswerButton.classList.add('fadeIn');
 
         a.appendChild(bonusAnswerButton);              // answer 가 a에 소속될 수 있게
         bonusAnswerButton.innerHTML = answerText;      // element 안의 HTML이나 XML 가져오기
 
-        bonusAnswerButton.addEventListener("click", function (e) {
+
+        function clickListener(){
             var children = document.querySelectorAll('.answerList');  // 버튼을 모두 선택할 수 있게, html 의 onClick
+
             for (let i = 0; i < children.length; i++) {
-                children[i].disabled = true;            // 버튼을 하나라도 누르면 모두 안보이게
+                children[i].disabled = true;            // 생성된 모든 버튼 안보이게
                 children[i].style.WebkitAnimation = "fadeOut 0.5s";
                 children[i].style.animation = "fadeOut 0.5s";
             }
             setTimeout(() => {
                 for (let i = 0; i < children.length; i++) {
-                    children[i].style.display = 'none';   // 버튼을 하나라도 누르면 모두 비활성화
+                    children[i].style.display = 'none';   // 생성된 모든 버튼 비활성화
                 }
-                console.log(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
-                alert(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
-                return something;
-            }, 450)
+            }, 450)                 // 450 밀리초 후에 익명 화살표 함수 실행
 
+            console.log(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
+            alert(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
+            return bonusAnswerButton.id;
+        }
+
+        bonusAnswerButton.addEventListener("click", function(event) {   // 버튼이 하나라도 눌리면
+            console.log("addEventListener 실헹");
+            return clickListener();
         }, false);
+
+        // console.log("-- makeBonusAnswer complete");
     }
 }
 
@@ -100,6 +111,7 @@ function setResult() {
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
+    console.log("-- setResult complete");
     goResult();
 }
 
@@ -114,5 +126,7 @@ function goResult() {       // 화면전환
             result.style.display = "block"
         }, 450)
     })
+    console.log("-- goResult complete");
+    console.log("-- task done.");
     // setResult();
 }
