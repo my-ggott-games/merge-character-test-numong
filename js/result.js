@@ -19,7 +19,7 @@ function calResult() {
     var result;
     if (finalSelect.length > 1) {  // bbcc bccb abbc aaaa aaaa aaaa
         makeBonusQuestion();
-        result = makeBonusQnA();
+        result = setBonusQnA();
         console.log("if-result 잘 들어왔나요? " + result);
         console.log("중복 있어요!");
         alert("중복 있어요!");
@@ -41,7 +41,7 @@ function calResult() {
 
     }
 
-    function makeBonusQnA() {
+    function setBonusQnA() {
         var selectedResult;
         for (let i in finalSelect) {        // 답변: 버튼 만들기
             var finalSelectIndex = finalSelect[i];
@@ -54,18 +54,19 @@ function calResult() {
 
     function makeBonusAnswer(answerText, idx) {
         var a = document.querySelector('.answerBox');
-        var answer = document.createElement('button');  // button 만들어 반환
-        answer.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
-        answer.classList.add('my-3');
-        answer.classList.add('px-3');
-        answer.classList.add('py-3');
-        answer.classList.add('mx-auto');
-        answer.classList.add('fadeIn');
+        var bonusAnswerButton = document.createElement('button');  // button 만들어 반환
+        bonusAnswerButton.id = bonusList[0].aBonus[idx].type;
+        bonusAnswerButton.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
+        bonusAnswerButton.classList.add('my-3');
+        bonusAnswerButton.classList.add('px-3');
+        bonusAnswerButton.classList.add('py`-3');
+        bonusAnswerButton.classList.add('mx-auto');
+        bonusAnswerButton.classList.add('fadeIn');
 
-        a.appendChild(answer);              // answer 가 a에 소속될 수 있게
-        answer.innerHTML = answerText;      // element 안의 HTML이나 XML 가져오기
+        a.appendChild(bonusAnswerButton);              // answer 가 a에 소속될 수 있게
+        bonusAnswerButton.innerHTML = answerText;      // element 안의 HTML이나 XML 가져오기
 
-        answer.addEventListener("click", function () {
+        bonusAnswerButton.addEventListener("click", function (e) {
             var children = document.querySelectorAll('.answerList');  // 버튼을 모두 선택할 수 있게, html 의 onClick
             for (let i = 0; i < children.length; i++) {
                 children[i].disabled = true;            // 버튼을 하나라도 누르면 모두 안보이게
@@ -76,10 +77,12 @@ function calResult() {
                 for (let i = 0; i < children.length; i++) {
                     children[i].style.display = 'none';   // 버튼을 하나라도 누르면 모두 비활성화
                 }
-                console.log(bonusList[0].aBonus[idx].type + " 가 최종 선택되었습니다!");
+                console.log(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
+                alert(bonusAnswerButton.id + " 가 최종 선택되었습니다!");
+                return something;
             }, 450)
+
         }, false);
-        return bonusList[0].aBonus[idx].type;           // 이 친구를 어디서 캐치해서 써먹을 건데?
     }
 }
 

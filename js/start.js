@@ -8,18 +8,18 @@ let qIdx = 0;         // q의 인덱스, goNext() 에서 배열의 0번째 요�
 
 function makeAnswer(answerText, qIdx, idx){
   var a = document.querySelector('.answerBox');
-  var answer = document.createElement('button');  // button 만들어 반환
-  answer.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
-  answer.classList.add('my-3');
-  answer.classList.add('px-3');
-  answer.classList.add('py-3');
-  answer.classList.add('mx-auto');
-  answer.classList.add('fadeIn');
+  var answerButton = document.createElement('button');  // button 만들어 반환
+  answerButton.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
+  answerButton.classList.add('my-3');
+  answerButton.classList.add('px-3');
+  answerButton.classList.add('py-3');
+  answerButton.classList.add('mx-auto');
+  answerButton.classList.add('fadeIn');
 
-  a.appendChild(answer);              // answer 가 a에 소속될 수 있게
-  answer.innerHTML = answerText;      // element 안의 HTML이나 XML 가져오기
+  a.appendChild(answerButton);              // answer 가 a에 소속될 수 있게
+  answerButton.innerHTML = answerText;      // element 안의 HTML이나 XML 가져오기
 
-  answer.addEventListener("click", function(){
+  answerButton.addEventListener("click", function(){
     var children = document.querySelectorAll('.answerList');  // 버튼을 모두 선택할 수 있게, html 의 onClick
     for(let i = 0; i < children.length; i++){
       children[i].disabled = true;            // 버튼을 하나라도 누르면 모두 안보이게
