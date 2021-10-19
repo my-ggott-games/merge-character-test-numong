@@ -22,7 +22,7 @@ function makeAnswer(answerText, qIdx, idx) {
     answerButton.addEventListener("click", function () {
         var children = document.querySelectorAll('.answerList');  // 버튼을 모두 선택할 수 있게, html 의 onClick
         for (let i = 0; i < children.length; i++) {
-            children[i].disabled = true;            // 버튼을 하나라도 누르면 모두 안보이게
+            children[i].disabled = true;            // 버튼 비활성화
             children[i].style.WebkitAnimation = "fadeOut 0.5s";
             children[i].style.animation = "fadeOut 0.5s";
         }
@@ -30,17 +30,18 @@ function makeAnswer(answerText, qIdx, idx) {
             var target = qnaList[qIdx].a[idx].type;     // 대답에 해당되는 타입 전부 1점 추가
             for (let i = 0; i < target.length; i++) {
                 select[target[i]] += 1;
-                console.log(target[i] + " 가 선택되었습니다!");
             }
 
             for (let i = 0; i < children.length; i++) {
-                children[i].style.display = 'none';   // 버튼을 하나라도 누르면 모두 비활성화
+                children[i].style.display = 'none';   // 버튼 사라지게
             }
             if (qIdx < 12) {
                 goNext(++qIdx);         // 다음 질문으로 넘어가기
             }
         }, 450)
+        console.log(select);
     }, false);
+
 }
 
 function makeQnA(qIdx) {
@@ -68,6 +69,7 @@ function goNext(qIdx) {
     }
 
     if (qIdx === endPoint) {
+
         setResult()
         // goResult();
         return;
