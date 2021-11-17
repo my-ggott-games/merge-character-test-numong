@@ -22,3 +22,7 @@ img {
   -ms-user-select: none;
   user-select: none;
 }
+
+a, u {
+  text-decoration: none;
+}

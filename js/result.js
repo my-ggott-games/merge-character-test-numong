@@ -98,9 +98,9 @@ function setResult() {
     }
 
     console.log("point : " + point);
+
     const resultName = document.querySelector('.resultName');
     resultName.innerHTML = infoList[point].name;
-
     var resultImg = document.createElement('img');
     const imgDiv = document.querySelector('#resultImg');
     var imgURL = 'img/image-' + point + '.jpeg';       // image-n.jpeg
@@ -108,6 +108,11 @@ function setResult() {
     resultImg.alt = point;
     resultImg.classList.add('img-fluid');     // image 에 반응성 적용
     imgDiv.appendChild(resultImg);          // resultImg 연결
+
+    var resultLink = document.createElement('resultLink');
+    resultLink.setAttribute('href', infoList[point].link);
+    resultLink.innerHTML = '누멍이 만화 보러가기';
+    document.body.appendChild(resultLink);      //resultLink 연결
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
