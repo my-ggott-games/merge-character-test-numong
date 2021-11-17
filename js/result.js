@@ -93,6 +93,10 @@ function calResult() {
 function setResult() {
     let point = calResult();
 
+    if(!isBonusTargetSelected) {
+        return;
+    }
+
     console.log("point : " + point);
     const resultName = document.querySelector('.resultname');
     resultName.innerHTML = infoList[point].name;
