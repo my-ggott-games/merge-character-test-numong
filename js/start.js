@@ -2,6 +2,7 @@ const main = document.querySelector("#main"); // 상수에 main section 담기
 const qna = document.querySelector("#qna");   // 상수에 qna section 담기
 const result = document.querySelector("#result");  // 상수에 result section 담기
 const endPoint = 12;
+const bonusPoint = 99;
 const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var progressWidth = 1;
 let qIdx = 0;         // q의 인덱스, goNext() 에서 배열의 0번째 요소부터 차례로 질문한다.
@@ -35,11 +36,13 @@ function makeAnswer(answerText, qIdx, idx) {
             for (let i = 0; i < children.length; i++) {
                 children[i].style.display = 'none';   // 버튼 사라지게
             }
-            if (qIdx < 12) {
+            if (qIdx < endPoint) {
                 goNext(++qIdx);         // 다음 질문으로 넘어가기
             }
         }, 450)
         console.log(select);
+        console.log("qIdx in makeAnswer : " + qIdx);
+
     }, false);
 
 }
@@ -69,12 +72,16 @@ function goNext(qIdx) {
     }
 
     if (qIdx === endPoint) {
-
         setResult()
-        // goResult();
+       // goResult();
+        return;
+    }   // 질문 끝!
+    else if (qIdx === bonusPoint){
+        setResult();
+        goResult();
         return;
     }
-    makeQnA(qIdx);
+    makeQnA(qIdx);      // 답변이 클릭됐을 때 1이 더해져 다음 질문으로 넘어간다.
     moveProgressBar();
 }
 

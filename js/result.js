@@ -1,13 +1,24 @@
+var isBonusTargetSelected = 0
+
 function calResult() {
     var finalSelect = maxIndices(select);
     var result;
-    if (finalSelect.length > 1) {  // bbcc bccb abbc aaaa aaaa aaaa
+    if (finalSelect.length > 1) {  // aaaa aaaa aaaa cccc cccc cccc
         makeBonusQuestion();
         setBonusAnswer();
-        console.log("setBonusAnswer 탈출 직후")
+        console.log("중복 있어요!");
+        alert("중복 있어요!");
+        // add something here
+    }
+    else {
+        console.log("중복 없어요!");
+        alert("중복 없어요!");
+        result = select.indexOf(Math.max(...select));
+        console.log("result : " + result);
+        return result;
     }
     result = select.indexOf(Math.max(...select));
-    alert("보너스 문제!");
+    console.log("result : " + result);
     return result;
 
     function maxIndices(select) {
@@ -42,7 +53,6 @@ function calResult() {
     function makeBonusAnswer(answerText, idx) {
         var a = document.querySelector('.answerBox');
         var bonusAnswerButton = document.createElement('button');  // button 만들어 반환
-        // bonusAnswerButton.id = bonusList[0].aBonus[idx].type;
         bonusAnswerButton.classList.add('answerList');       // answerList 라는 이름의 클래스값 부여
         bonusAnswerButton.classList.add('my-3');
         bonusAnswerButton.classList.add('px-3');
@@ -61,11 +71,16 @@ function calResult() {
                 children[i].style.animation = "fadeOut 0.5s";
             }
             setTimeout(() => {
+                isBonusTargetSelected = 1;
                 var bonusTarget = bonusList[0].aBonus[idx].type;
                 select[bonusTarget] += 1;
 
                 for (let i = 0; i < children.length; i++) {
                     children[i].style.display = 'none';   // 버튼 사라지게
+                }
+                if (isBonusTargetSelected) {
+                    console.log("endPoint in setTimeout : " + endPoint);
+                    goNext(bonusPoint);         // 다음 질문으로 넘어가기
                 }
             }, 450)                 // 450 밀리초 후에 익명 화살표 함수 실행
             console.log(select);
@@ -77,6 +92,8 @@ function calResult() {
 
 function setResult() {
     let point = calResult();
+
+    console.log("point : " + point);
     const resultName = document.querySelector('.resultname');
     resultName.innerHTML = infoList[point].name;
 
@@ -89,7 +106,10 @@ function setResult() {
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
-    goResult();
+    console.log("결과준비 완료!");
+    console.log(imgURL);
+    alert("결과준비 완료!");
+
 }
 
 function goResult() {       // 화면전환
@@ -101,7 +121,7 @@ function goResult() {       // 화면전환
         setTimeout(() => {
             qna.style.display = "none";
             result.style.display = "block"
-        }, 450)
+        }, 500)
     })
     // setResult();
 }
