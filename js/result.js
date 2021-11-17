@@ -1,4 +1,6 @@
 var isBonusTargetSelected = 0
+var noDuplicate = 0
+
 
 function calResult() {
     var finalSelect = maxIndices(select);
@@ -13,9 +15,7 @@ function calResult() {
     else {
         console.log("중복 없어요!");
         alert("중복 없어요!");
-        result = select.indexOf(Math.max(...select));
-        console.log("result : " + result);
-        return result;
+        noDuplicate = 1;
     }
     result = select.indexOf(Math.max(...select));
     console.log("result : " + result);
@@ -106,10 +106,14 @@ function setResult() {
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
-    console.log("결과준비 완료!");
+
     console.log(imgURL);
+    console.log("결과준비 완료!");
     alert("결과준비 완료!");
 
+    if (noDuplicate) {
+        goResult();
+    }
 }
 
 function goResult() {       // 화면전환
