@@ -1,20 +1,21 @@
-var isBonusTargetSelected = 0
-var noDuplicate = 0
+var isBonusTargetSelected = 0;
+var noDuplicate = 0;
+var isDuplicate = 0;
 
 
 function calResult() {
     var finalSelect = maxIndices(select);
     var result;
     if (finalSelect.length > 1) {  // aaaa aaaa aaaa cccc cccc cccc
+        isDuplicate = 1;
         makeBonusQuestion();
         setBonusAnswer();
         console.log("중복 있어요!");
-        alert("중복 있어요!");
-        // add something here
+        // alert("중복 있어요!");
     }
     else {
         console.log("중복 없어요!");
-        alert("중복 없어요!");
+        // alert("중복 없어요!");
         noDuplicate = 1;
     }
     result = select.indexOf(Math.max(...select));
@@ -93,7 +94,7 @@ function calResult() {
 function setResult() {
     let point = calResult();
 
-    if(!isBonusTargetSelected) {
+    if(!isBonusTargetSelected && isDuplicate) {
         return;
     }
 
@@ -113,7 +114,7 @@ function setResult() {
 
     console.log(imgURL);
     console.log("결과준비 완료!");
-    alert("결과준비 완료!");
+    // alert("결과준비 완료!");
 
     if (noDuplicate) {
         goResult();
