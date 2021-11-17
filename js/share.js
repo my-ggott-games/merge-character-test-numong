@@ -5,6 +5,7 @@ function setShare(){
   var resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareDes = infoList[resultAlt].name;
+  console.log(shareDes);
   const shareImage = url + 'img/image-' + resultAlt + '.jpeg';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 

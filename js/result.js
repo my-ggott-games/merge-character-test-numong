@@ -99,7 +99,7 @@ function setResult() {
     }
 
     console.log("point : " + point);
-    const resultName = document.querySelector('.resultname');
+    const resultName = document.querySelector('.resultName');
     resultName.innerHTML = infoList[point].name;
 
     var resultImg = document.createElement('img');
@@ -112,7 +112,7 @@ function setResult() {
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
 
-    console.log(imgURL);
+    console.log("imgDiv" + imgDiv);
     console.log("결과준비 완료!");
     // alert("결과준비 완료!");
 
