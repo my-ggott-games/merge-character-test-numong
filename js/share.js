@@ -4,8 +4,7 @@ function setShare(){
   var resultImg = document.querySelector('#resultImg');
   var resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = '내 소울메이트는 누구일까?';
-  const shareDes = infoList[resultAlt].name;
-  console.log(shareDes);
+  const shareDes = infoList[resultAlt].name;    // ex) "누멍... 누멍!" - 꿀꿀이
   const shareImage = url + 'img/image-' + resultAlt + '.jpeg';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 

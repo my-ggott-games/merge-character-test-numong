@@ -93,7 +93,6 @@ function calResult() {
 
 function setResult() {
     let point = calResult();
-
     if(!isBonusTargetSelected && isDuplicate) {
         return;
     }
@@ -106,13 +105,14 @@ function setResult() {
     const imgDiv = document.querySelector('#resultImg');
     var imgURL = 'img/image-' + point + '.jpeg';       // image-n.jpeg
     resultImg.src = imgURL;
+    resultImg.alt = point;
     resultImg.classList.add('img-fluid');     // image 에 반응성 적용
     imgDiv.appendChild(resultImg);          // resultImg 연결
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
 
-    console.log("imgDiv" + imgDiv);
+    console.log(imgDiv);
     console.log("결과준비 완료!");
     // alert("결과준비 완료!");
 
