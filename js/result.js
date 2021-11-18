@@ -109,7 +109,7 @@ function setResult() {
     resultImg.classList.add('img-fluid');     // image 에 반응성 적용
     imgDiv.appendChild(resultImg);          // resultImg 연결
 
-    var resultLink = document.createElement('resultLink');
+    var resultLink = document.createElement('a');
     resultLink.setAttribute('href', infoList[point].link);
     resultLink.innerHTML = '누멍이 만화 보러가기';
     document.body.appendChild(resultLink);      //resultLink 연결
