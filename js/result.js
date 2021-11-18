@@ -109,15 +109,15 @@ function setResult() {
     resultImg.classList.add('img-fluid');     // image 에 반응성 적용
     imgDiv.appendChild(resultImg);          // resultImg 연결
 
-    var resultLink = document.createElement('a');
+    let linkDiv = document.getElementById('linkDiv');
+    let resultLink = document.createElement('a');
     resultLink.setAttribute('href', infoList[point].link);
     resultLink.innerHTML = '누멍이 만화 보러가기';
-    document.body.appendChild(resultLink);      //resultLink 연결
+    linkDiv.appendChild(resultLink);      // resultLink 연결
 
     const resultDesc = document.querySelector('.resultDesc');
     resultDesc.innerHTML = infoList[point].desc;
 
-    console.log(imgDiv);
     console.log("결과준비 완료!");
     // alert("결과준비 완료!");
 
