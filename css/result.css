@@ -35,7 +35,7 @@
   border-radius: 5px;
 }
 
-.gohome{
+.goHome{
   color: #FAFBFE;
   background-color: #CFAC6A;
   font-size: 20px;
@@ -43,7 +43,7 @@
   border-radius: 5px;
 }
 
-.gohome:hover, .gohome:focus {
+.goHome:hover, .goHome:focus {
   color: black;
   background-color: #CFAC6A;
 }
