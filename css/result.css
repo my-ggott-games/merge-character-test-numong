@@ -35,6 +35,35 @@
   border-radius: 5px;
 }
 
+.twitter{
+  color: white;
+  background-color: #1DA1F2;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.twitter:hover, twitter:focus {
+  color: black;
+  background-color: #1DA1F2;
+  border-radius: 5px;
+}
+
+.facebook{
+  color: white;
+  background-color: #4267B2;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.facebook:hover, facebook:focus {
+  color: black;
+  background-color: #4267B2;
+  border-radius: 5px;
+}
+
+
 .goHome{
   color: #FAFBFE;
   background-color: #CFAC6A;
