@@ -38,7 +38,7 @@ function setTwitterShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-  window.open("https://twitter.com/intent/tweet?text=" + shareTitle + "&url=" + shareURL);
+  window.open("https://twitter.com/intent/tweet?text=" + shareTitle + "&url=" + shareURL + "&hashtags=누멍이_소울메이트_테스트");
 
 }
 
