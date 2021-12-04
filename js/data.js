@@ -55,10 +55,10 @@ const qnaList = [
     {
         q: '친구들과 함께 있을 때 나는...',
         a: [
-            {answer: '나를 따르라! 내가 대장이지!!', type: ['1', '3', '6']},
-            {answer: '쟤가 알아서 다 해주겠지 뭐~', type: ['2', '4', '5']},
-            {answer: '얘들아 어디 있어...? 나 또 미아 됐어...', type: ['0', '8', '9', '10']},
-            {answer: '먼저 친구가 있는지부터 물어봐불래?', type: ['7', '11']},
+            {answer: '나를 따르라! 내가 대장이지!!', type: ['0', '3', '6']},
+            {answer: '내 친구는 내가 챙긴다!', type: ['1', '7', '9',]},
+            {answer: '쟤가 알아서 다 해주겠지 뭐~', type: ['2', '4', '5', '11']},
+            {answer: '얘들아 어디 있어...? 나 또 미아 됐어...', type: ['8', '10']},
         ]
     },
     {
@@ -116,20 +116,20 @@ const qnaList = [
 
 const bonusList = [
     {
-        qBonus: '솔직히... 누가 더 좋아요?',
+        qBonus: '어떤 문구가 가장 마음에 드나요?',
         aBonus: [
-            {answer: '누멍이', type: ['0']},
-            {answer: '흰멍이', type: ['1']},
-            {answer: '검멍이', type: ['2']},
-            {answer: '너굴멍이', type: ['3']},
-            {answer: '삽살이', type: ['4']},
-            {answer: '얼룩이', type: ['5']},
-            {answer: '바둑이', type: ['6']},
-            {answer: '청설모', type: ['7']},
-            {answer: '덕구', type: ['8']},
-            {answer: '꿀꿀이', type: ['9']},
-            {answer: '고양이', type: ['10']},
-            {answer: '두더지', type: ['11']}
+            {answer: '천진난만 순진무구', type: ['0']},
+            {answer: '따뜻한 행동대장', type: ['1']},
+            {answer: '천하태평 무념무상', type: ['2']},
+            {answer: '임기응변 언어의 마술사', type: ['3']},
+            {answer: '복슬복슬 친화력 만렙', type: ['4']},
+            {answer: '조용한 럭비공', type: ['5']},
+            {answer: '똑 부러지는 리더', type: ['6']},
+            {answer: '빠릿빠릿 똑똑이', type: ['7']},
+            {answer: '자유도 좋지만 집도 좋아', type: ['8']},
+            {answer: '겉차속따 밥돌이', type: ['9']},
+            {answer: '못 말리는 말괄량이', type: ['10']},
+            {answer: '집콕이 제일 좋아', type: ['11']}
         ]
     }
 ]
