@@ -38,15 +38,17 @@ function setTwitterShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-  window.open("https://twitter.com/intent/tweet?text=" + shareTitle + "&url=" + shareURL + "&hashtags=누멍이_소울메이트_테스트");
+
+  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "&url=" + encodeURIComponent(shareURL) + "&hashtags=누멍이_소울메이트_테스트");
 
 }
 
 function setFacebookShare(){
   var resultImg = document.querySelector('#resultImg');
   var resultAlt = resultImg.firstElementChild.alt;
+  const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
-  window.open("http://www.facebook.com/sharer/sharer.php?u=" + shareURL);
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL) + "&t=" + encodeURIComponent(shareTitle));
 }
 
 
