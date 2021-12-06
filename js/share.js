@@ -30,6 +30,8 @@ function setKakaoShare(){
       },
     ]
   });
+
+  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
 }
 
 function setTwitterShare(){
@@ -38,9 +40,8 @@ function setTwitterShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-
   window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "&url=" + encodeURIComponent(shareURL) + "&hashtags=누멍이_소울메이트_테스트");
-
+  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
 }
 
 function setFacebookShare(){
@@ -49,6 +50,7 @@ function setFacebookShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
   window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL) + "&t=" + encodeURIComponent(shareTitle));
+  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
 }
 
 
