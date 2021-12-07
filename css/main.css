@@ -9,6 +9,19 @@ p{
   font-size: 20px;
 }
 
+.begin{
+  color: #A2BA82;
+  background-color: #FAFBFE;
+  font-size: 20px;
+  border: 3px solid #A2BA82;
+  border-radius: 15px;
+}
+
+.begin:hover, .begin:focus {
+  color: #FAFBFE;
+  background-color: #A2BA82;
+  border: 3px solid transparent;
+}
 
 .keepAll {
   word-break: keep-all;

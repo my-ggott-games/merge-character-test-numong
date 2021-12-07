@@ -25,31 +25,17 @@
   font-size: 18px;
 }
 
-.pleaseWait-container {
-  background: rgba(0,0,0,.3);
-  border-radius: 10px;
-  padding: 15px 20px;
-  position: absolute;
-  bottom: 50px;
-  display: none;
-}
-
-.pleaseWait-container.show {
-  display: block;
-}
-
 .kakao{
   color: white;
   background-color: #FEE500;
   font-size: 20px;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .kakao:hover, .kakao:focus {
   color: black;
   background-color: #FEE500;
-  border-radius: 5px;
 }
 
 .twitter{
@@ -57,13 +43,12 @@
   background-color: #1DA1F2;
   font-size: 20px;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .twitter:hover, twitter:focus {
   color: black;
   background-color: #1DA1F2;
-  border-radius: 5px;
 }
 
 .facebook{
@@ -71,13 +56,12 @@
   background-color: #4267B2;
   font-size: 20px;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .facebook:hover, facebook:focus {
   color: black;
   background-color: #4267B2;
-  border-radius: 5px;
 }
 
 
@@ -86,7 +70,7 @@
   background-color: #CFAC6A;
   font-size: 20px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .goHome:hover, .goHome:focus {
@@ -95,20 +79,22 @@
 }
 
 .refresh{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: none;
-  color: #FAFBFE;
-  background-color: #CFAC6A;
+  color: #CFAC6A;
+  background-color: #FAFBFE;
   font-size: 20px;
-  border: 0;
-  border-radius: 5px;
+  border: 3px solid #CFAC6A;
+  border-radius: 15px;
 }
 
 .refresh:hover, .refresh:focus {
-  color: black;
+  color: #FAFBFE;
   background-color: #CFAC6A;
+  border: 3px solid transparent;
 }
-
-
 
 
 .keepAll {
