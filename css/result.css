@@ -25,6 +25,19 @@
   font-size: 18px;
 }
 
+.pleaseWait-container {
+  background: rgba(0,0,0,.3);
+  border-radius: 10px;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 50px;
+  display: none;
+}
+
+.pleaseWait-container.show {
+  display: block;
+}
+
 .kakao{
   color: white;
   background-color: #FEE500;
@@ -80,6 +93,23 @@
   color: black;
   background-color: #CFAC6A;
 }
+
+.refresh{
+  display: none;
+  color: #FAFBFE;
+  background-color: #CFAC6A;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.refresh:hover, .refresh:focus {
+  color: black;
+  background-color: #CFAC6A;
+}
+
+
+
 
 .keepAll {
   word-break: keep-all;

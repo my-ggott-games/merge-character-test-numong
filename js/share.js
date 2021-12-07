@@ -31,7 +31,7 @@ function setKakaoShare(){
     ]
   });
 
-  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
+  pleaseWait();
 }
 
 function setTwitterShare(){
@@ -40,8 +40,8 @@ function setTwitterShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "&url=" + encodeURIComponent(shareURL) + "&hashtags=누멍이_소울메이트_테스트");
-  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
+  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "%0a%0a" +"&url=" + encodeURIComponent(shareURL) + "%0a" +"&hashtags=누멍이_소울메이트_테스트");
+  pleaseWait();
 }
 
 function setFacebookShare(){
@@ -49,8 +49,19 @@ function setFacebookShare(){
   var resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
-  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL) + "&t=" + encodeURIComponent(shareTitle));
-  document.getElementById("pleaseWait").innerHTML = "5초만 기다려줘!";
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL));
+  pleaseWait();
 }
 
+function pleaseWait(){
+  const pleaseWait = document.getElementById("pleaseWait");
+  const refresh = document.getElementById("refresh");
+  pleaseWait.innerHTML = "5초만 기다려줘!";
+  pleaseWait.style.display = 'none';
+  pleaseWait.style.display = 'block';
+  setTimeout(() => {
+    pleaseWait.style.display = 'none';
+    refresh.style.display = 'block';
+  }, 7000)
+}
 
