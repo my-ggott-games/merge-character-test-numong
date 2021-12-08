@@ -20,7 +20,7 @@ p{
 .begin:hover, .begin:focus {
   color: #FAFBFE;
   background-color: #A2BA82;
-  border: 3px solid transparent;
+  /*border: 3px solid transparent;*/
 }
 
 .keepAll {
