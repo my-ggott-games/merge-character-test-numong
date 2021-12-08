@@ -57,17 +57,16 @@
 }
 
 .goHome{
-  color: #CFAC6A;
-  background-color: #FAFBFE;
+  color: #FAFBFE;
+  background-color: #CFAC6A;
   font-size: 20px;
-  border: 3px solid #CFAC6A;
+  border: 0;
   border-radius: 15px;
 }
 
 .goHome:hover, .goHome:focus {
-  color: #FAFBFE;
+  color: black;
   background-color: #CFAC6A;
-  border: 3px solid transparent;
 }
 
 .refresh{
