@@ -2,7 +2,6 @@ var isBonusTargetSelected = 0;
 var noDuplicate = 0;
 var isDuplicate = 0;
 
-
 function calResult() {
     var finalSelect = maxIndices(select);
     var result;
@@ -138,4 +137,8 @@ function goResult() {       // 화면전환
         }, 500)
     })
     // setResult();
+}
+
+function moveHome() {
+    location.href = "/index.html";
 }

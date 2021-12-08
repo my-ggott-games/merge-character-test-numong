@@ -49,8 +49,25 @@ function setFacebookShare(){
   var resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
-  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL));
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL), '&t='+encodeURIComponent(shareTitle));
   pleaseWait();
+}
+
+function setClipboardShare(){
+  var resultImg = document.querySelector('#resultImg');
+  var resultAlt = resultImg.firstElementChild.alt;
+  const shareURL = url + 'page/result-' + resultAlt + '.html';
+
+  var btns = document.querySelectorAll('.clipboard');
+  var clipboard = new ClipboardJS(btns);
+
+  clipboard.on('success', function(e) {
+    console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
 }
 
 function pleaseWait(){

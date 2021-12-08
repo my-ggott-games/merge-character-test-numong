@@ -24,46 +24,37 @@
 .resultShare{
   font-size: 18px;
 }
-
+<!--
+/*#FEE500 #1DA1F2 #4267B2*/
+-->
 .kakao{
-  color: white;
-  background-color: #FEE500;
+  color: #FAFBFE;
+  background-color: transparent;
   font-size: 20px;
   border: 0px;
-  border-radius: 20px;
-}
-
-.kakao:hover, .kakao:focus {
-  color: black;
-  background-color: #FEE500;
 }
 
 .twitter{
-  color: white;
-  background-color: #1DA1F2;
+  color: #FAFBFE;
+  background-color: transparent;
   font-size: 20px;
   border: 0px;
-  border-radius: 20px;
-}
-
-.twitter:hover, twitter:focus {
-  color: black;
-  background-color: #1DA1F2;
 }
 
 .facebook{
-  color: white;
-  background-color: #4267B2;
+  color: #FAFBFE;
+  background-color: transparent;
   font-size: 20px;
   border: 0px;
-  border-radius: 20px;
 }
 
-.facebook:hover, facebook:focus {
-  color: black;
-  background-color: #4267B2;
+.clipboard{
+  font-size: 40px;
+  background-color: transparent;
+  border: 0px;
+  border-radius: 15px;
+  transform: scaleY(-1);
 }
-
 
 .goHome{
   color: #CFAC6A;

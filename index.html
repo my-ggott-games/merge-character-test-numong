@@ -41,6 +41,7 @@
     Hypertext REFerence: 태그가 사용하는 파일의 원본-->
 
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
     <script src="./js/jskey.js" charset="utf-8"></script>
 
 
@@ -60,7 +61,7 @@
         <p> 월월월월월월월 </p>
 
         <button type="button" class="begin mt-3 py-2 px-3"
-                onclick="js:begin()">시작하기
+                onclick="js:begin()">start!
         </button>
     </section>
     <section id="qna">
@@ -89,10 +90,12 @@
         <div class="resultDesc">
 
         </div>
-        <div class="mt-3">
-            <button type="button" class="kakao py-2 px-3" onclick="js:setKakaoShare()">공유하기</button>
-            <button type="button" class="twitter py-2 px-3" onclick="js:setTwitterShare()">공유하기</button>
-            <button type="button" class="facebook py-2 px-3" onclick="js:setFacebookShare()">공유하기</button>
+        <div class="mt-3 mx-auto">
+            <button type="button" class="kakao" onclick="js:setKakaoShare()"><img src="./img/kakaotalk.png" width="50%" height="50%" alt="카카오톡 공유하기"></button>
+            <button type="button" class="twitter" onclick="js:setTwitterShare()"><img src="./img/twitter.png" width="50%" height="50%" alt="트위터 공유하기"></button>
+            <button type="button" class="facebook" onclick="js:setFacebookShare()"><img src="./img/facebook.png" width="50%" height="50%" alt="페이스북 공유하기"></button>
+            <button type="button" class="clipboard" onclick="js:setClipboardShare()">🖇</button>
+
             <p class="resultShare pt-3" id="pleaseWait"></p>
             <button type="button" id="refresh" class="refresh mx-auto mt-3 py-2 px-3" onClick="window.location.reload()">다시하기</button>
         </div>
