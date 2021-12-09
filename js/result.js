@@ -140,5 +140,5 @@ function goResult() {       // 화면전환
 }
 
 function moveHome() {
-    location.href = "/index.html";
+    location.href = "../index.html";
 }
