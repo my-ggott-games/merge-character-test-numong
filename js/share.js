@@ -40,7 +40,7 @@ function setTwitterShare(){
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "%0a%0a" +"&url=" + encodeURIComponent(shareURL) + "%0a" +"&hashtags=누멍이_소울메이트_테스트");
+  window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareTitle) + "%0a" + encodeURIComponent(infoList[resultAlt].name) +"%0a%0a" +"&url=" + encodeURIComponent(shareURL) + "%0a" +"&hashtags=누멍이_소울메이트_테스트");
   pleaseWait();
 }
 
@@ -49,7 +49,7 @@ function setFacebookShare(){
   var resultAlt = resultImg.firstElementChild.alt;
   const shareTitle = '내 소울메이트는 누구일까?';
   const shareURL = url + 'page/result-' + resultAlt + '.html';
-  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL), '&t='+encodeURIComponent(shareTitle));
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(shareURL) + "&t=" + encodeURIComponent(shareTitle));
   pleaseWait();
 }
 
@@ -58,15 +58,12 @@ function setClipboardShare(){
   var resultAlt = resultImg.firstElementChild.alt;
   const shareURL = url + 'page/result-' + resultAlt + '.html';
 
-  var btns = document.querySelectorAll('.clipboard');
-  var clipboard = new ClipboardJS(btns);
-
-  clipboard.on('success', function(e) {
-    console.log(e);
-  });
-
-  clipboard.on('error', function(e) {
-    console.log(e);
+  navigator.clipboard.writeText(shareURL).then(function() {
+    /* clipboard successfully set */
+    alert("링크를 복사했어요!");
+  }, function() {
+    /* clipboard write failed */
+    alert("다시 시도해주세요!");
   });
 }
 
