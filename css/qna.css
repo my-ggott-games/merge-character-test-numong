@@ -39,7 +39,7 @@
 .progressBar {
   height: 100%;
   border-radius: 20px;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#46719F+0,ADC9E1+52,C7C7C7+100;Red+3D+%231 */
   background: var(--밥그릇딥블루);
   /* Old browsers */
   background: -moz-linear-gradient(left, var(--밥그릇딥블루) 0%, var(--밥그릇블루) 65%, var(--밥그릇그레이) 100%);
@@ -48,7 +48,7 @@
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, var(--밥그릇딥블루) 0%, var(--밥그릇블루) 65%, var(--밥그릇그레이) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#46719F', endColorstr='#C7C7C7', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr= var(--밥그릇딥블루), endColorstr= var(--밥그릇그레이), GradientType=0);
   /* IE6-9 */
 }
 

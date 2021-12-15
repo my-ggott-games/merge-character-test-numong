@@ -66,7 +66,7 @@
 
 .goHome:hover, .goHome:focus {
   color: var(--배경2);
-  background-color: 라;
+  background-color: var(--누멍브라운);
   border: 3px solid transparent;
 }
 
