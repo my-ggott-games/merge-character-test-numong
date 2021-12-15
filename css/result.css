@@ -1,13 +1,13 @@
 #result{
   display: none;
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
   width: 90%;
   text-align: center;
   border-radius: 20px;
 }
 
 #shareResult{
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
   width: 90%;
   text-align: center;
   border-radius: 20px;
@@ -28,21 +28,21 @@
 /*#FEE500 #1DA1F2 #4267B2*/
 -->
 .kakao{
-  color: #FAFBFE;
+  color: var(--배경2);
   background-color: transparent;
   font-size: 20px;
   border: 0px;
 }
 
 .twitter{
-  color: #FAFBFE;
+  color: var(--배경2);
   background-color: transparent;
   font-size: 20px;
   border: 0px;
 }
 
 .facebook{
-  color: #FAFBFE;
+  color: var(--배경2);
   background-color: transparent;
   font-size: 20px;
   border: 0px;
@@ -57,16 +57,16 @@
 }
 
 .goHome{
-  color: #CFAC6A;
-  background-color: #FAFBFE;
+  color: var(--누멍브라운);
+  background-color: var(--배경2);
   font-size: 20px;
-  border: 3px solid #CFAC6A;
+  border: 3px solid var(--누멍브라운);
   border-radius: 15px;
 }
 
 .goHome:hover, .goHome:focus {
-  color: #FAFBFE;
-  background-color: #CFAC6A;
+  color: var(--배경2);
+  background-color: 라;
   border: 3px solid transparent;
 }
 
@@ -75,16 +75,16 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: none;
-  color: #CFAC6A;
-  background-color: #FAFBFE;
+  color: var(--누멍브라운);
+  background-color: var(--배경2);
   font-size: 20px;
-  border: 3px solid #CFAC6A;
+  border: 3px solid var(--누멍브라운);
   border-radius: 15px;
 }
 
 .refresh:hover, .refresh:focus {
-  color: #FAFBFE;
-  background-color: #CFAC6A;
+  color: var(--배경2);
+  background-color: var(--누멍브라운);
   border: 3px solid transparent;
 }
 

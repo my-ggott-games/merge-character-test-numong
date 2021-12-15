@@ -4,7 +4,7 @@
 }
 
 .qBox {
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
   color: black;
   border: 3px solid black;
   border-radius: 20px;
@@ -14,7 +14,7 @@
 }
 
 .answerList {
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
   color: black;
   display: block;
   border: 3px solid black;
@@ -24,14 +24,14 @@
 }
 
 .answerList:hover, .answerList:focus {
-  background-color: #ADC9E1;
-  color: #FAFBFE;
+  background-color: var(--밥그릇블루);
+  color: var(--배경2);
 }
 
 .progress {
   height: 20px;
   width: 90%;
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
   border-radius: 20px;
   border: 3px solid black;
 }
@@ -40,15 +40,15 @@
   height: 100%;
   border-radius: 20px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+52,ff5c5c+100;Red+3D+%231 */
-  background: #46719F;
+  background: var(--밥그릇딥블루);
   /* Old browsers */
-  background: -moz-linear-gradient(left, #46719F 0%, #ADC9E1 65%, #C7C7C7 100%);
+  background: -moz-linear-gradient(left, var(--밥그릇딥블루) 0%, var(--밥그릇블루) 65%, var(--밥그릇그레이) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #46719F 0%, #ADC9E1 65%, #C7C7C7 100%);
+  background: -webkit-linear-gradient(left, var(--밥그릇딥블루) 0%, var(--밥그릇블루) 65%, var(--밥그릇그레이) 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #46719F 0%, #ADC9E1 65%, #C7C7C7 100%);
+  background: linear-gradient(to right, var(--밥그릇딥블루) 0%, var(--밥그릇블루) 65%, var(--밥그릇그레이) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#46719F', endColorstr='#C7C7C7', GradientType=0);
   /* IE6-9 */
 }
 

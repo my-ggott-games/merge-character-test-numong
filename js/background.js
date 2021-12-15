@@ -1,10 +1,12 @@
 function updateBackground() {
+    // var element = document.querySelector(':root');
     var
         hr = (new Date()).getHours(),
         body = document.body,
         bstyle = body.style;
     if (hr < 2) {
-        bstyle.backgroundColor = "#576068";
+        bstyle.backgroundColor = r.style.getPropertyValue("--배경20");
+        //element.style.getPropertyValue("--bg20");
     } else if (hr < 4) {
         bstyle.backgroundColor = "#5B6575";
     } else if (hr < 6) {

@@ -1,5 +1,5 @@
 body{
-  background-color: #FAFBFE;
+  background-color: var(--배경2);
 }
 
 img {
