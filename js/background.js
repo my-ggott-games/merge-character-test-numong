@@ -5,32 +5,31 @@ function updateBackground() {
         body = document.body,
         bstyle = body.style;
     if (hr < 2) {
-        bstyle.backgroundColor = r.style.getPropertyValue("--배경20");
-        //element.style.getPropertyValue("--bg20");
+        bstyle.backgroundColor = "#586068"; // 배경20
     } else if (hr < 4) {
-        bstyle.backgroundColor = "#5B6575";
+        bstyle.backgroundColor = "#5B6476"; // 배경18
     } else if (hr < 6) {
-        bstyle.backgroundColor = "#5B627C";
+        bstyle.backgroundColor = "#5B6E7D"; // 배경16
     } else if (hr < 8) {
-        bstyle.backgroundColor = "#CECCB3";
+        bstyle.backgroundColor = "#CECCB4"; // 배경15
     } else if (hr < 10) {
-        bstyle.backgroundColor = "#E8DDC9";
+        bstyle.backgroundColor = "#E8DDC9"; // 배경11
     } else if (hr < 12) {
-        bstyle.backgroundColor = "#ECE5DB";
+        bstyle.backgroundColor = "#ECE5DB"; // 배경7
     } else if (hr < 14) {
-        bstyle.backgroundColor = "#EBE9E0";
+        bstyle.backgroundColor = "#EBE9E0"; // 배경5
     } else if (hr < 16) {
-        bstyle.backgroundColor = "#EFEDE2";
+        bstyle.backgroundColor = "#F0EDE2"; // 배경3
     } else if (hr < 18) {
-        bstyle.backgroundColor = "#ECE0C8";
+        bstyle.backgroundColor = "#ECE0C9"; // 배경9
     } else if (hr < 20) {
-        bstyle.backgroundColor = "#ECDAB9";
+        bstyle.backgroundColor = "#ECD9BA"; // 배경13
     } else if (hr < 22) {
-        bstyle.backgroundColor = "#A1A7B1";
+        bstyle.backgroundColor = "#A1A7B1"; // 배경12
     }else {
-        bstyle.backgroundColor = "#98979B";
+        bstyle.backgroundColor = "#98979B"; // 배경14
     }
 }
-// #ECD9BA #CECCB4 #5B6476
+
 setInterval(updateBackground, 1000 * 60);
 updateBackground();
