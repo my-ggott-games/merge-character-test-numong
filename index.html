@@ -12,9 +12,9 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="author" content="누멍이팬 지민호">
     <meta name="keywords" content="누멍이, 심리테스트, 팬게임">
-    <meta property="og:url" content="https://beta-numong-test.netlify.app" />
-    <meta property="og:title" content="누멍이 소울메이트 테스트" />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beta-numong-test.netlify.app"/>
+    <meta property="og:title" content="누멍이 소울메이트 테스트"/>
+    <meta property="og:type" content="website"/>
     <meta property="og:image" content="img/share.png"/> <!-- 상대경로라 SNS 공유 효과는 없다.-->
     <meta property="og:image:alt" content="우와! 친구다 친구!"/>
     <meta property="og:description" content="내 소울메이트는 누구일까?"/>
@@ -61,10 +61,13 @@
             <!-- img-fluid 로 이미지에 반응성 적용-->
         </div>
         <h4 class="mt-3">우와! 친구다 친구!</h4>
-        <p> 월월월월월월월 </p>
+        <div id="pleaseUseExternalBrowser">
+
+        </div>
 
         <button type="button" class="btn begin mt-3 py-2 px-3"
-                onclick="begin()">시작하기</button>
+                onclick="begin()">시작하기
+        </button>
     </section>
     <section id="qna">
         <div class="progress mx-auto mt-5">
@@ -93,20 +96,26 @@
 
         </div>
         <div id="shareDiv" class="mt-3 mx-auto">
-            <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="./img/kakaotalk.svg" alt="카카오톡 공유하기"></button>
-            <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="./img/twitter.svg" alt="트위터 공유하기"></button>
-            <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="./img/facebook.svg" alt="페이스북 공유하기"></button>
+            <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="./img/kakaotalk.svg"
+                                                                                    alt="카카오톡 공유하기"></button>
+            <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="./img/twitter.svg"
+                                                                                        alt="트위터 공유하기"></button>
+            <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="./img/facebook.svg"
+                                                                                          alt="페이스북 공유하기"></button>
             <button type="button" class="clipboard px-2" onclick="setClipboardShare()">🖇</button>
 
             <p class="resultShare pt-3" id="pleaseWait"></p>
         </div>
-        <button type="button" id="refresh" class="refresh mx-auto mt-3 py-2 px-3" onClick="window.location.reload()">다시하기</button>
+        <button type="button" id="refresh" class="refresh mx-auto mt-3 py-2 px-3" onClick="window.location.reload()">
+            다시하기
+        </button>
     </section>
     <script src="./js/background.js" charset="utf-8"></script>
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
     <script src="./js/share.js" charset="utf-8"></script>
     <script src="./js/result.js" charset="utf-8"></script>
+    <script src="./js/detecting.js" charset="utf-8"></script>
     <!-- 통상적으로 js는 body 하단에 import-->
 </div>
 
