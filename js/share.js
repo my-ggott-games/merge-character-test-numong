@@ -70,7 +70,7 @@ function setClipboardShare(){
 function pleaseWait(){
   const pleaseWait = document.getElementById("pleaseWait");
   const refresh = document.getElementById("refresh");
-  pleaseWait.innerHTML = "5초만 기다려줘!";
+  pleaseWait.innerHTML = "5초만 기다려주세요!";
   pleaseWait.style.display = 'none';
   pleaseWait.style.display = 'block';
   setTimeout(() => {
