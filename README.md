@@ -3,6 +3,15 @@
 <img src="https://user-images.githubusercontent.com/47032054/130989845-0fcd001e-7adf-46e4-8ac0-1c736aec211b.PNG" width="200" height="320" alt title= "이후 mbti 테스트에서 소울메이트 테스트로 노선을 변경했다."> 
 </br>
 
+### 프로젝트 진행 상황
+![Progress](https://progress-bar.dev/83/?title=2nd_BTㅤ&width=400&color=CFAC6A)
+* **기획**
+* **구현**
+* **알파 테스트**
+* **베타 테스트 <sub>(1차)</sub>**
+* **베타 테스트 <sub>(2차)</sub>**
+* 배포 완료
+
 ### TMI
 * 2시간에 한 번 배경 색이 바뀝니다.
 * **누멍이 만화에 있는 색만** 사용했습니다! <sub>(공유하기 버튼 제외)</sub>
