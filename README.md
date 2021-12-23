@@ -1,8 +1,4 @@
 # 누멍이 팬게임 2탄! 누멍이 소울메이트 테스트
-### 사건의 발단
-<img src="https://user-images.githubusercontent.com/47032054/130989845-0fcd001e-7adf-46e4-8ac0-1c736aec211b.PNG" width="200" height="320" alt title= "이후 mbti 테스트에서 소울메이트 테스트로 노선을 변경했다."> 
-</br>
-
 ### 프로젝트 진행 상황
 ![Progress](https://progress-bar.dev/83/?title=2nd_BTㅤ&width=400&color=CFAC6A)
 * **기획**
@@ -11,12 +7,18 @@
 * **베타 테스트 <sub>(1차)</sub>**
 * **베타 테스트 <sub>(2차)</sub>**
 * 배포 완료
+</br>
+
+### 사건의 발단
+<img src="https://user-images.githubusercontent.com/47032054/130989845-0fcd001e-7adf-46e4-8ac0-1c736aec211b.PNG" width="200" height="320" alt title= "이후 mbti 테스트에서 소울메이트 테스트로 노선을 변경했다."> 
+</br>
 
 ### TMI
 * 2시간에 한 번 배경 색이 바뀝니다.
 * **누멍이 만화에 있는 색만** 사용했습니다! <sub>(공유하기 버튼 제외)</sub>
 * 생각보다 문답 구성이 오래 걸리네요...
 * 캐릭터 해석이 지극히 주관적입니다.
+* 누멍이의 견종은 시골똥개입니다. <sub>(작가님피셜)</sub>
 </br>
 
 ### 이미지 저작권
