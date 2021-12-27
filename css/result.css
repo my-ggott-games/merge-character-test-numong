@@ -74,7 +74,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: none;
+  display: block;
   color: var(--누멍브라운);
   background-color: var(--배경2);
   font-size: 20px;

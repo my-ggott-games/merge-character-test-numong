@@ -30,6 +30,7 @@ function setKakaoShare(){
       },
     ]
   });
+
   pleaseWait();
 }
 
@@ -74,7 +75,6 @@ function pleaseWait(){
   pleaseWait.style.display = 'block';
   setTimeout(() => {
     pleaseWait.style.display = 'none';
-    // refresh.style.display = 'block';
   }, 7000)
 }
 
