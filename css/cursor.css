@@ -9,11 +9,12 @@ input[type=checkbox],
 input[type=radio],
 .opt
 {
-    cursor: url(https://beta-numong-test.netlify.app/img/cursor.png) 0 0, auto !important;
+    cursor: url(../img/cursor.png) 0 0, auto !important;
 }
 
 
 /* 마우스 커서 링크 */
+#main
 #right-search-form>#right-search-btn,
 #board-info #board-info-bottom #addFavoriteBtn,
 #article-list #article-option-area>#article-option-area-toggle-btn,
@@ -26,8 +27,8 @@ input[type=radio],
 .fr-view img,
 .pull-left,
 .theme_btn_box,
-a {
-    cursor: url(https://beta-numong-test.netlify.app/img/cursor_heart.png) 0 0, auto !important;
+a, button {
+    cursor: url(../img/cursor_heart.png) 0 0, auto !important;
 }
 
 
@@ -40,5 +41,5 @@ span#viewers,
 .fr-box.fr-basic.fr-element,
 input[type='text']
 {
-    cursor: url(https://beta-numong-test.netlify.app/img/cursor.png) 0 0, auto !important;
+    cursor: url(../img/cursor_heart.png) 0 0, auto !important;
 }
