@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<html lang="ko" dir="ltr" onmouseup="stamp()" xmlns="http://www.w3.org/1999/html">
 <!-- Left To Right, 텍스트의 방향 지정, rlt의 경우 거꾸로 -->
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,7 @@
 
 </head>
 <body>
+<div class="content" id="stamp" onmouseup="stamp()"></div>
 <div class="container noSelect">
     <!-- in order to use grid system-->
     <section id="main" class="mx-auto my-5 px-3 py-5">
@@ -118,6 +119,8 @@
     <script src="./js/share.js" charset="utf-8"></script>
     <script src="./js/result.js" charset="utf-8"></script>
     <script src="./js/detecting.js" charset="utf-8"></script>
+    <script src="./js/stamp.js" charset="utf-8"></script>
+
     <!-- 통상적으로 js는 body 하단에 import-->
 </div>
 

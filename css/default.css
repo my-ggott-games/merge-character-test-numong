@@ -1,5 +1,7 @@
 body{
   background-color: var(--배경2);
+  float: none;
+  overflow: hidden;
 }
 
 img {
@@ -20,6 +22,12 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+#stamp{
+  width: 0;
+  height: 0;
+  background-color: var(--누멍브라운);
 }
 
 a, u {
