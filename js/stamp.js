@@ -11,12 +11,12 @@ function stamp() {
     content.appendChild(stampImg);
 
     setTimeout(() => {
-        stampImg.style.WebkitAnimation = "fadeOut 1s";
-        stampImg.style.animation = "fadeOut 1s";
+        stampImg.style.WebkitAnimation = "fadeOut 0.5s";
+        stampImg.style.animation = "fadeOut 0.5s";
         setTimeout(() => {
             stampImg.remove();
-        }, 450)
-    }, 300)
+        }, 300)
+    }, 100)
 }
 
 function luckyStamp(){
