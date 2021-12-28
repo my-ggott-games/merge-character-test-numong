@@ -2,6 +2,7 @@ body {
     background-color: var(--배경2);
     float: none;
     overflow: hidden;
+    touch-action: manipulation;
 }
 
 img {
@@ -33,8 +34,4 @@ img {
 a, u {
     text-decoration: none;
     font-size: 16px;
-}
-
-.disable-dbl-tap-zoom {
-    touch-action: manipulation;
 }
