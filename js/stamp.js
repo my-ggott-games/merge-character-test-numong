@@ -22,7 +22,7 @@ function stamp() {
 function luckyStamp(){
     const rand_0_17 = Math.floor(Math.random() * 18);
     if (rand_0_17 === 17){
-        return "img/cursor_heart.png";
-    }
-    else return "img/cursor.png";
+        return "https://beta-numong-test.netlify.app/img/cursor_heart.png";
+    } // 상대경로로 설정하면 결과.html 과 index.html 일 때의 경로가 달라짐
+    else return "https://beta-numong-test.netlify.app/img/cursor.png";
 }
