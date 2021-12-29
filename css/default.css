@@ -1,7 +1,8 @@
 body {
     background-color: var(--배경2);
     float: none;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     touch-action: manipulation;
 }
 
