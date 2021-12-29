@@ -2,8 +2,8 @@ function stamp() {
     var stampImg = document.createElement("img");
     stampImg.src = luckyStamp();
     stampImg.alt = "흰멍이 도장";
-    var x = event.clientX + 5;
-    var y = event.clientY + 10;
+    var x = event.pageX + 5;
+    var y = event.pageY + 10;
     stampImg.style.position = "absolute";
     stampImg.style.left = x + "px";
     stampImg.style.top = y + "px";
