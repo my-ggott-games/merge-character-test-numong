@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr" onmouseup="stamp()" xmlns="http://www.w3.org/1999/html">
+<html lang="ko" dir="ltr" onmouseup="stamp(); processChanges();" xmlns="http://www.w3.org/1999/html">
 <!-- Left To Right, 텍스트의 방향 지정, rlt의 경우 거꾸로 -->
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="./css/qna.css">
     <link rel="stylesheet" href="./css/result.css">
     <link rel="stylesheet" href="./css/color.css">
-    <link rel="stylesheet" href="./css/cursor.css">
+    <!--<link rel="stylesheet" href="./css/cursor.css">-->
 
     <!-- RELation(필수): 현재 문서와 외부 리소스 사이의 연관 관계를 명시
     Hypertext REFerence: 태그가 사용하는 파일의 원본-->
@@ -53,9 +53,9 @@
 
 </head>
 <body>
-<div class="content" id="stamp" onmouseup="stamp()"></div>
-<div class="container noSelect">
-    <!-- in order to use grid system-->
+
+<div class="content" id="stamp" onmouseup="stamp(); processChanges();"></div>
+<div class="container noSelect">    <!-- in order to use grid system-->
     <section id="main" class="mx-auto my-5 px-3 py-5">
         <!-- https://getbootstrap.com/docs/5.1/utilities/spacing/ -->
         <h1 class="mb-3">내 소울메이트는 누구일까?</h1>
@@ -70,7 +70,8 @@
         </div>
 
         <button type="button" class="btn begin mt-3 py-2 px-3"
-                onclick="begin()">시작하기</button>
+                onclick="begin()">시작하기
+        </button>
     </section>
     <section id="qna">
         <div class="progress mx-auto mt-5">
@@ -120,7 +121,7 @@
     <script src="./js/result.js" charset="utf-8"></script>
     <script src="./js/detecting.js" charset="utf-8"></script>
     <script src="./js/stamp.js" charset="utf-8"></script>
-
+    <script src="./js/memo.js" charset="utf-8"></script>
     <!-- 통상적으로 js는 body 하단에 import-->
 </div>
 
