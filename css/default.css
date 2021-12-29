@@ -1,12 +1,13 @@
-html{
-  float: none;
-  touch-action: manipulation;
+html {
+    float: none;
+    touch-action: manipulation;
 }
 
-body{
-  background-color: var(--배경2);
-  overflow-x: hidden;
-  overflow-y: scroll;
+body {
+    background-color: var(--배경2);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: background 1s ease;
 }
 
 img {
