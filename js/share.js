@@ -1,4 +1,4 @@
-const url = 'https://beta-numong-test.netlify.app/';
+const url = 'https://numong-soulmate-test.netlify.app/';
 
 function setKakaoShare(){
   var resultImg = document.querySelector('#resultImg');
