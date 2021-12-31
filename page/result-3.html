@@ -41,6 +41,10 @@
 
     <!-- RELation(필수): 현재 문서와 외부 리소스 사이의 연관 관계를 명시
     Hypertext REFerence: 태그가 사용하는 파일의 원본-->
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="../js/jskey.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="content" id="stamp" onmouseup="stamp()"></div>
@@ -58,7 +62,18 @@
         <div class="resultDesc">
             <p>수다 떨기 좋아하는 너굴멍이는<br>엄마랑 밭 건너 도로 건너 뒷산에 살아요.<br>너굴멍이와 함께라면 어색할 틈 없이 대화가<br>끊이질 않아 즐거운 시간을 보낼 수 있어요!<br>상황판단이 뛰어나 친구를 잘 도와주고<br>자연에 대해 아는 것도 많은 친구랍니다.<br>그리고 엄마를 생각하는 마음이 깊어<br>밥을 구하면 엄마 몫을 잊지 않고 꼭 챙겨요.<br>사실 너굴멍이는 강아지가 아니라 너구리예요.<br>쉿! 우리끼리만 아는 비밀이에요.<br><br>너굴멍이와 친해지고 싶다면...<br>이야기를 잘 들어준다면<br>너굴멍이와 금방 친해질 수 있어요!</p>
         </div>
-        <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
+        <div id="shareDiv" class="mt-3 mx-auto">
+        <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="../img/kakaotalk.svg"
+                                                                                alt="카카오톡 공유하기"></button>
+        <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="../img/twitter.svg"
+                                                                                    alt="트위터 공유하기"></button>
+        <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="../img/facebook.svg"
+                                                                                      alt="페이스북 공유하기"></button>
+        <button type="button" class="clipboard px-2" onclick="setClipboardShare()">🖇</button>
+
+        <p class="resultShare pt-3" id="pleaseWait"></p>
+    </div>
+    <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
     </section>
 
     <script src="../js/background.js" charset="utf-8"></script>
@@ -66,6 +81,7 @@
     <script src="../js/result.js" charset="utf-8"></script>
     <script src="../js/share.js" charset="utf-8"></script>
     <script src="../js/stamp.js" charset="utf-8"></script>
+    <script src="../js/data.js" charset="utf-8"></script>
 </div>
 </body>
 </html>

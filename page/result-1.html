@@ -41,6 +41,10 @@
 
     <!-- RELation(필수): 현재 문서와 외부 리소스 사이의 연관 관계를 명시
     Hypertext REFerence: 태그가 사용하는 파일의 원본-->
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="../js/jskey.js" charset="utf-8"></script>
 </head>
 <body>
 <div class="content" id="stamp" onmouseup="stamp()"></div>
@@ -58,7 +62,18 @@
         <div class="resultDesc">
             <p>똑똑한 시골 강아지 흰멍이는<br>아랫마을에서 할머니와 함께 살아요.<br>누멍이와 검멍이도 함께요!<br>친구들을 배려하며 먹을 것을 나눠주기도 하고,<br>긴급한 문제가 생겼을 때 직접<br>발로 뛰어다니며 해결하는 성격이에요.<br>도움이 필요한 친구를 위해<br>용기를 내어 낯선 길로 모험을 떠날<br>정도로 씩씩한 마음씨를 가졌어요.<br>흰멍이는 생각보다 아침잠이 많은데<br>워낙 검멍이가 잠이 많아 티가 잘 안나요!<br><br>흰멍이와 친해지고 싶다면...<br>흰멍이의 배려에 감사를 표한다면<br>흰멍이와 금방 친해질 수 있어요!</p>
         </div>
-        <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
+        <div id="shareDiv" class="mt-3 mx-auto">
+        <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="../img/kakaotalk.svg"
+                                                                                alt="카카오톡 공유하기"></button>
+        <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="../img/twitter.svg"
+                                                                                    alt="트위터 공유하기"></button>
+        <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="../img/facebook.svg"
+                                                                                      alt="페이스북 공유하기"></button>
+        <button type="button" class="clipboard px-2" onclick="setClipboardShare()">🖇</button>
+
+        <p class="resultShare pt-3" id="pleaseWait"></p>
+    </div>
+    <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
     </section>
 
     <script src="../js/background.js" charset="utf-8"></script>
@@ -66,6 +81,7 @@
     <script src="../js/result.js" charset="utf-8"></script>
     <script src="../js/share.js" charset="utf-8"></script>
     <script src="../js/stamp.js" charset="utf-8"></script>
+    <script src="../js/data.js" charset="utf-8"></script>
 </div>
 </body>
 </html>
