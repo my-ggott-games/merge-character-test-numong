@@ -1,2 +1,2 @@
-Kakao.init("88c9e26c2e28feeaf30da533286a6a7b");
+Kakao.init("30cf954d1baaa8ef2ffa0d334cd7115d");
 Kakao.isInitialized();
