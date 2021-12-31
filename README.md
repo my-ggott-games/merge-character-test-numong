@@ -1,12 +1,13 @@
 # 누멍이 팬게임 2탄! 누멍이 소울메이트 테스트
 ### 프로젝트 진행 상황
-![Progress](https://progress-bar.dev/83/?title=2nd_BTㅤ&width=400&color=CFAC6A)
+![Progress](https://progress-bar.dev/100/?title=2nd_BTㅤ&width=400&color=CFAC6A)
 * **기획**
 * **구현**
 * **알파 테스트**
 * **베타 테스트 <sub>(1차)</sub>**
 * **베타 테스트 <sub>(2차)</sub>**
-* 배포 완료
+* **배포 완료**
+* 유지 및 보수, 버그 제보 받는 중...
 </br>
 
 ### 사건의 발단
