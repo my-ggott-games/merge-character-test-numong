@@ -52,16 +52,16 @@
     <section id="shareResult" class="mx-auto my-5 py-5 px-3" style="word-break:keep-all">
         <h1>당신의 소울메이트는 바로...</h1>
         <div class="resultName">
-            <p>"흰멍아, 좋은 생각이 났어." -누멍이</p>
+
         </div>
         <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-            <img src="../img/image-0.jpeg" alt="0" class="img-fluid">
+
         </div>
         <div id="linkDiv" class="mx-auto my-3">
-            <a href="https://www.instagram.com/p/BwCryD8nBdx/">누멍이 만화 보러가기</a>
+
         </div>
         <div class="resultDesc">
-            <p style="word-break:keep-all">순진한 시골 강아지 누멍이는<br>아랫마을에서 할머니와 함께 살아요.<br>흰멍이와 검멍이도 함께요!<br>누멍이는 침대도 뼈다귀도 다 좋아하지만<br>할머니의 분홍색 양말을 물면서 노는 걸<br>제일 좋아하는 강아지예요.<br>어떤 친구와 만나든 순수하고 따뜻하게<br>대하는 누멍이의 성격 덕분에<br>누구든 누멍이에게 마음을 곧잘 열게 된답니다.<br>가끔 눈 대신 흙을 먹을 만큼<br>덜렁거리기도 하지만 괜찮아요<br>그런 순박함이 누멍이의 매력이니까요!<br><br>누멍이와 친해지고 싶다면...<br>할머니의 양말과 함께라면<br>누멍이와 금방 친해질 수 있어요!</p>
+
         </div>
         <div id="shareDiv" class="mt-3 mx-auto">
         <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="../img/kakaotalk.svg"
@@ -77,14 +77,34 @@
     <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
     </section>
 
+
     <script src="../js/background.js" charset="utf-8"></script>
     <!-- 시간에 따른 자동 배경 변경 -->
     <script src="../js/result.js" charset="utf-8"></script>
     <script src="../js/stamp.js" charset="utf-8"></script>
-    <script src="../js/data.js" charset="utf-8"></script>
     <script src="../js/share.js" charset="utf-8"></script>
+    <script src="../js/data.js" charset="utf-8"></script>
+    <script>
+        let point = 0;
+        const resultName = document.querySelector('.resultName');
+        resultName.innerHTML = infoList[point].name;
+        var resultImg = document.createElement('img');
+        const imgDiv = document.querySelector('#resultImg');
+        var imgURL = '../img/image-' + point + '.jpeg';       // image-n.jpeg
+        resultImg.src = imgURL;
+        resultImg.alt = point;
+        resultImg.classList.add('img-fluid');     // image 에 반응성 적용
+        imgDiv.appendChild(resultImg);          // resultImg 연결
 
+        let linkDiv = document.getElementById('linkDiv');
+        let resultLink = document.createElement('a');
+        resultLink.setAttribute('href', infoList[point].link);
+        resultLink.innerHTML = '누멍이 만화 보러가기';
+        linkDiv.appendChild(resultLink);      // resultLink 연결
 
+        const resultDesc = document.querySelector('.resultDesc');
+        resultDesc.innerHTML = infoList[point].desc;
+    </script>
 </div>
 </body>
 </html>

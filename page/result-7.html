@@ -10,7 +10,7 @@
     <!-- sns 공유하기 - twitter, Open Graph -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="누멍이팬 지민호">
-<meta name="twitter:title" content="누멍이 소울메이트 테스트">
+    <meta name="twitter:title" content="누멍이 소울메이트 테스트">
     <meta name="author" content="누멍이팬 지민호">
     <meta name="keywords" content="누멍이, 심리테스트, 팬게임, 팬메이드">
     <meta property="og:url" content="https://numong-soulmate-test.netlify.app/page/result-7.html"/>
@@ -48,32 +48,33 @@
 </head>
 <body>
 <div class="content" id="stamp" onmouseup="stamp()"></div>
-<div class="container noSelect">    <section id="shareResult" class="mx-auto my-5 py-5 px-3" style="word-break:keep-all">
+<div class="container noSelect">
+    <section id="shareResult" class="mx-auto my-5 py-5 px-3" style="word-break:keep-all">
         <h1>당신의 소울메이트는 바로...</h1>
         <div class="resultName">
-            <p>"너는 운이 좋았어." -청설모</p>
+
         </div>
         <div id="resultImg" class="my-3 col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-            <img src="../img/image-7.jpeg" alt="7" class="img-fluid">
+
         </div>
         <div id="linkDiv" class="mx-auto my-3">
-            <a href="https://www.instagram.com/p/BuOw502HxHj/">누멍이 만화 보러가기</a>
+
         </div>
         <div class="resultDesc">
-            <p>눈치도 몸놀림도 재빠른 청설모는<br>길 건너 뒷산의 나무 위에서 살아요.<br>겨울잠을 자는 다람쥐와 달리,<br>청설모는 겨울에도 깨어 있어<br>도토리를 찾아 돌아다녀요.<br>청설모는 눈치가 빠른 만큼<br>머리도 좋고 계산도 빠르기 때문에<br>곁에 있으면 든든한 친구랍니다.<br>겉으로는 무심한 척 하지만<br>속이 깊어 친구들을 잘 챙겨줘요.<br><br>청설모와 친해지고 싶다면...<br>도토리와 함께라면<br>청설모와 금방 친해질 수 있어요!</p>
+
         </div>
         <div id="shareDiv" class="mt-3 mx-auto">
-        <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="../img/kakaotalk.svg"
-                                                                                alt="카카오톡 공유하기"></button>
-        <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="../img/twitter.svg"
-                                                                                    alt="트위터 공유하기"></button>
-        <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="../img/facebook.svg"
-                                                                                      alt="페이스북 공유하기"></button>
-        <button type="button" class="clipboard px-2" onclick="setClipboardShare()">🖇</button>
+            <button type="button" class="kakao px-2" onclick="setKakaoShare()"><img src="../img/kakaotalk.svg"
+                                                                                    alt="카카오톡 공유하기"></button>
+            <button type="button" class="twitter px-2" onclick="setTwitterShare()"><img src="../img/twitter.svg"
+                                                                                        alt="트위터 공유하기"></button>
+            <button type="button" class="facebook px-2" onclick="setFacebookShare()"><img src="../img/facebook.svg"
+                                                                                          alt="페이스북 공유하기"></button>
+            <button type="button" class="clipboard px-2" onclick="setClipboardShare()">🖇</button>
 
-        <p class="resultShare pt-3" id="pleaseWait"></p>
-    </div>
-    <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
+            <p class="resultShare pt-3" id="pleaseWait"></p>
+        </div>
+        <button type="button" class="goHome mt-3 py-2 px-3" onclick="moveHome()">다시하기</button>
     </section>
 
     <script src="../js/background.js" charset="utf-8"></script>
@@ -81,6 +82,28 @@
     <script src="../js/result.js" charset="utf-8"></script>
     <script src="../js/share.js" charset="utf-8"></script>
     <script src="../js/stamp.js" charset="utf-8"></script>
-    <script src="../js/data.js" charset="utf-8"></script></div>
+    <script src="../js/data.js" charset="utf-8"></script>
+    <script>
+        let point = 7;
+        const resultName = document.querySelector('.resultName');
+        resultName.innerHTML = infoList[point].name;
+        var resultImg = document.createElement('img');
+        const imgDiv = document.querySelector('#resultImg');
+        var imgURL = '../img/image-' + point + '.jpeg';       // image-n.jpeg
+        resultImg.src = imgURL;
+        resultImg.alt = point;
+        resultImg.classList.add('img-fluid');     // image 에 반응성 적용
+        imgDiv.appendChild(resultImg);          // resultImg 연결
+
+        let linkDiv = document.getElementById('linkDiv');
+        let resultLink = document.createElement('a');
+        resultLink.setAttribute('href', infoList[point].link);
+        resultLink.innerHTML = '누멍이 만화 보러가기';
+        linkDiv.appendChild(resultLink);      // resultLink 연결
+
+        const resultDesc = document.querySelector('.resultDesc');
+        resultDesc.innerHTML = infoList[point].desc;
+    </script>
+</div>
 </body>
 </html>
