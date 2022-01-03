@@ -117,7 +117,7 @@ const qnaList = [
 
 const bonusList = [
     {
-        qBonus: '어떤 문구가 가장 마음에 드나요?',
+        qBonus: '보너스 질문! 어떤 문구가 가장 마음에 드나요?',
         aBonus: [
             {answer: '천진난만 순진무구', type: ['0']},
             {answer: '따뜻한 행동대장', type: ['1']},
