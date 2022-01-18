@@ -70,7 +70,6 @@ function goNext(qIdx) {
             }
         }
     }
-
     if (qIdx === endPoint) {
         console.log("qIdx === endPoint");
         setResult()
