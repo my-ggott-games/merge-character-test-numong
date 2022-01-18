@@ -244,3 +244,4 @@ const infoList = [
             '두더지와 친해지고 싶다면...' + '\n' + '혼자만의 여유를 존중해준다면' + '\n' + '두더지와 금방 친해질 수 있어요!',
         link: 'https://www.instagram.com/p/Br0TclGH1HD/'
     },
+]
