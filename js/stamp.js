@@ -19,9 +19,9 @@ function stamp() {
     }, 300)
 }
 
-function luckyStamp(){
-    const rand_0_17 = Math.floor(Math.random() * 8);
-    if (rand_0_17 === 7){       // 1/7 의 확률로 하트 흰멍이가 나온다
+function luckyStamp() {
+    const rand_0_7 = Math.floor(Math.random() * 7) + 1; // (0 ~ 6) + 1 -> (1 ~ 7)
+    if (rand_0_7 === 7) {      // 1/7 의 확률로 하트 흰멍이가 나온다
         return url + "img/cursor_heart.png";
     } // 상대경로로 설정하면 결과.html 과 index.html 일 때의 경로가 달라짐
     else return url + "img/cursor.png";
